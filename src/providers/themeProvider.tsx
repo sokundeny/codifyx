@@ -3,7 +3,6 @@
 import { Theme } from "@/types/type"
 import {
   createContext,
-  useContext,
   useEffect,
   useState,
 } from "react"
