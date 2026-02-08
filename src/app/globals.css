@@ -3,18 +3,71 @@
 :root {
   --background: #ffffff;
   --foreground: #181D27;
-  --primary: #003AD1;
+
+  /* BRAND */
+  --brand-primary: #003AD1;
+  --brand-primary-hover: #002fa8;
+  --brand-primary-soft: #e6ecff;
+  --brand-focus: #7596ff;
+
+  /* TEXT */
+  --text-primary: #181d27;
+  --text-secondary: #414651;
+  --text-muted: #535862;
+  --text-disabled: #717680;
+
+  /* BORDER */
+  --border-default: #d5d7da;
+  --border-muted: #e9eaeb;
+
+  /* BACKGROUND */
+  --bg-page: #ffffff;
+  --bg-muted: #f5f5f5;
+  
+  /* FEEDBACK */
+  --focus-ring: #f4ebff;  
+  --shadow-soft: 0 1px 2px rgba(10, 13, 18, 0.05);
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ffffff;
+
+  --brand-primary: #003AD1;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #A4A7AE;
+  --text-muted: #D5D7DA;
+  --text-disabled: #717680;
+
+  --border-default: #414651;
+  --border-muted: #414651;
+
+  --bg-muted: #181D27;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
+  --color-primary: var(--brand-primary);
+  --color-primary-hover: var(--brand-primary-hover);
+  --color-primary-soft: var(--brand-primary-soft);
+  --color-focus: var(--brand-focus);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-disabled: var(--text-disabled);
+
+  --color-border-default: var(--border-default);
+  --color-border-muted: var(--border-muted);
+
+  --color-background-page: var(--bg-page);
+  --color-background-muted: var(--bg-muted);
+
+  --color-ring-focus: var(--focus-ring);
+  --shadow-soft: var(--shadow-soft);
+
   --font-sans: var(--font-inter);
 }
 
