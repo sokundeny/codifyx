@@ -9,12 +9,12 @@ import CodifyxLight from "@/assets/Codifyx_light.png";
 import CodifyxDark from "@/assets/Codifyx_dark.png";
 import { Mail, Sun, Moon } from "lucide-react";
 
-interface Nav {
+export interface Nav {
   title: string;
   url: string;
 }
 
-const navItems: Nav[] = [
+export const navItems: Nav[] = [
   { title: "About Us", url: "#about" },
   { title: "Our Services", url: "#services" },
   { title: "Case Studies", url: "#cases" },
