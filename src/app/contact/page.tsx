@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
         >
           Connect Our Creative Team
         </h1>
-        <p className="text-xl leading-7.5 tracking-normal text-center">
+        <p className="text-xl text-[#FDFDFD] leading-7.5 tracking-normal text-center">
           Let us know how can we help.
         </p>
 
@@ -71,10 +71,10 @@ const Contact: React.FC = () => {
       <section className="flex flex-row gap-8">
         <article className="flex flex-col justify-between p-16 w-132 h-fill border border-border-muted rounded-lg">
           <div className="flex flex-col gap-2 w-full">
-            <h2 className="font-semibold text-xl leading-7.5 text-[#181D27]">
+            <h2 className="font-semibold text-xl leading-7.5 text-text-primary">
               Let’s Build With Clarity & Momentum
             </h2>
-            <p className="text-xs font-normal leading-4.5 text-[#535862] tracking-normal">
+            <p className="text-xs font-normal leading-4.5 text-text-muted tracking-normal">
               Lorem ipsum dolor sit amet consectetur. Tristique viverra gravida egestas venenatis aliquet duis.
             </p>
           </div>
@@ -87,10 +87,10 @@ const Contact: React.FC = () => {
         <article className="flex flex-col gap-8 flex-1 p-16 border border-border-muted rounded-lg">
           
           <div className="flex flex-col gap-2 w-full">
-            <h2 className="font-semibold text-xl leading-7.5 text-[#181D27]">
+            <h2 className="font-semibold text-xl leading-7.5 text-text-primary">
               Let’s Build With Clarity & Momentum
             </h2>
-            <p className="text-xs font-normal leading-4.5 text-[#535862] tracking-normal">
+            <p className="text-xs font-normal leading-4.5 text-text-muted tracking-normal">
               Lorem ipsum dolor sit amet consectetur. Tristique viverra gravida egestas venenatis aliquet duis. Vitae eu ipsum augue curabitur.
             </p>
           </div>
@@ -105,13 +105,14 @@ const Contact: React.FC = () => {
             <InputField label="Phone Number" placeholder="Enter Phone Number" type="tel" />
           </div>
 
+
           <div className="flex flex-col gap-1.5 w-full h-62.5">
-            <label className="text-sm font-medium leading-5 text-[#414651]">Message</label>
+            <label className="text-sm font-medium leading-5 text-text-secondary">Message</label>
             <textarea
               className="
-                w-full h-full px-3.5 py-2.5 font-normal leading-6 text-[#181D27] 
-                placeholder:text-[#717680] border border-[#D5D7DA] rounded-lg **:shadow-sm
-                focus:outline-none focus:border-[#7596FF] focus:ring-4 focus:ring-[#F4EBFF]
+                w-full h-full px-3.5 py-2.5 font-normal leading-6 text-text-primary 
+                placeholder:text-text-disabled border border-border-default rounded-lg **:shadow-sm
+                focus:outline-none focus:border-focus focus:ring-4 focus:ring-ring-focus
                 transition-all duration-200 ease-in-out"
               placeholder="Enter your message"
             />
@@ -152,8 +153,8 @@ const Contact: React.FC = () => {
               </div>
             </div>
             <button className="
-              py-2.5 px-4.5 w-full bg-primary hover:bg-[#002FA8] text-white 
-              leading-6 font-semibold text-base  border-primbg-primary focus:border-[#7596FF] 
+              py-2.5 px-4.5 w-full bg-primary hover:bg-primary-hover text-white 
+              leading-6 font-semibold text-base border-primary focus:border-focus 
               rounded-lg focus:outline-none shadow-xs hover:cursor-pointer
               focus:shadow-[0_0_0_4px_#F4EBFF,0_1px_2px_0_#0A0D120D] 
               transition-color duration-200 ease-in-out
@@ -168,19 +169,17 @@ const Contact: React.FC = () => {
   );
 };
 
-
-
 const InputField: React.FC<InputFieldProps> = ({ label, placeholder = "", type = "text" }) => (
   <div className="flex flex-col gap-1.5 flex-1">
-    <label className="text-sm font-medium leading-5 text-[#414651]">{label}</label>
+    <label className="text-sm font-medium leading-5 text-text-secondary">{label}</label>
     <input
       type={type}
       placeholder={placeholder}
       className="
         w-full h-11 px-3.5 py-2.5
-        text-base font-normal text-[#181D27] placeholder:text-[#717680] leading-6
-        border border-[#D5D7DA] rounded-lg **:shadow-sm
-        focus:outline-none focus:border-[#7596FF] focus:ring-4 focus:ring-[#F4EBFF]
+        text-base font-normal text-text-primary placeholder:text-text-disabled leading-6
+        border border-border-default rounded-lg **:shadow-sm
+        focus:outline-none focus:border-focus focus:ring-4 focus:ring-ring-focus
         transition-color duration-200 ease-in-out
       "
     />
@@ -198,18 +197,19 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, checked, onChange }) => {
         className="sr-only"
       />
 
+
       <span
         className={`
           w-4 h-4
           border rounded-sm
           flex items-center justify-center
           transition-colors
-          ${checked ? "bg-[#E6ECFF] border-primbg-primary" : "border-[#D5D7DA]"}
+          ${checked ? "bg-primary-soft border-primary" : "border-border-default"}
         `}
       >
         {checked && (
           <svg
-            className="w-3 h-3 text-primbg-primary"
+            className="w-3 h-3 text-primary"
             viewBox="0 0 12 12"
             fill="none"
           >
@@ -224,7 +224,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, checked, onChange }) => {
         )}
       </span>
 
-      <span className="text-sm leading-5 font-medium text-[#414651]">
+      <span className="text-sm leading-5 font-medium text-text-secondary">
         {label}
       </span>
     </label>
@@ -253,8 +253,8 @@ const TimeSelector: React.FC<TimeSelectorProps> = ({ onSelect }) => {
             py-2.5 px-4.5 w-full font-semibold text-base leading-6 rounded-lg shadow-xs
             border
             ${time === selectedTime
-              ? "bg-[#E6ECFF] border-[#E6ECFF] text-[#002FA8]"
-              : "bg-white border-[#D5D7DA] text-[#414651]"
+              ? "bg-primary-soft border-primary-soft text-primary-hover"
+              : "bg-background border-border-default text-text-secondary"
             }
             hover:cursor-pointer
           `}
@@ -267,12 +267,12 @@ const TimeSelector: React.FC<TimeSelectorProps> = ({ onSelect }) => {
   return (
     <div className="flex flex-col gap-6 w-full">
       <div className="flex flex-col gap-1.5 w-full">
-        <h3 className="text-sm font-medium leading-5 text-[#181D27]">Morning Shift</h3>
+        <h3 className="text-sm font-medium leading-5 text-text-primary">Morning Shift</h3>
         <div className="flex gap-3 w-full">{renderTimes(morningTimes)}</div>
       </div>
 
       <div className="flex flex-col gap-1.5 w-full">
-        <h3 className="text-sm font-medium leading-5 text-[#181D27]">Afternoon Shift</h3>
+        <h3 className="text-sm font-medium leading-5 text-text-primary">Afternoon Shift</h3>
         <div className="flex gap-3 w-full">{renderTimes(afternoonTimes)}</div>
       </div>
     </div>
