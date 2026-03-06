@@ -74,15 +74,14 @@ const NavBar = () => {
         </button>
 
         {/* Contact button */}
-        <Link href="">
-          <PrimaryButton 
-            icon={
-              <Mail size={16}/>
-            }
-          >
-            Contact Us
-          </PrimaryButton>
-        </Link>
+        <PrimaryButton 
+          icon={
+            <Mail size={16}/>
+          }
+          navigate="/contact"
+        >
+          Contact Us
+        </PrimaryButton>
       </div>
     </nav>
   );

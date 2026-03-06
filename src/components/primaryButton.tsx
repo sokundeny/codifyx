@@ -1,16 +1,23 @@
+"use client"
+
 import React from 'react'
+import Link from 'next/link'
 
 const PrimaryButton = ({ 
   children,
-  icon 
+  icon,
+  navigate 
 }: { 
   children: string ,
-  icon?: React.ReactNode
+  icon?: React.ReactNode,
+  navigate? :string
 }) => {
   return (
-    <div className='flex items-center justify-center gap-2 py-2.5 px-4 text-sm bg-primary text-white rounded-md'>
-        {children} {icon && icon}
-    </div>
+    <Link href={navigate || "/"}>
+      <div className='flex items-center justify-center min-h-10 gap-2 py-2.5 px-4 text-sm bg-primary text-white hover:bg-blue-800 rounded-md'>
+          {children} {icon && icon}
+      </div>
+    </Link>
   )
 }
 
