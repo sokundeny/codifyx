@@ -49,10 +49,14 @@ const NavBar = () => {
                 after:absolute
                 after:-bottom-2
                 after:left-0
-                after:w-0
+                after:w-full
                 after:h-0.5
+                after:opacity-0
                 after:bg-primary
-                hover:after:w-full
+                after:transition-all
+                after:duration-300
+                after:ease-in-out
+                hover:after:opacity-100
               `}
             >
               {item.title}
