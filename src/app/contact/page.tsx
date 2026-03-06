@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from 'next/image';
+import CodifyxLogoMark from '@/assets/codifyx_logomark_1.png';
 import Calendar from "@/components/calendar";
 
 interface TimeSelectorProps {
@@ -14,7 +15,6 @@ interface InputFieldProps {
   type?: string;
 }
 
-
 interface CheckboxProps {
   label: string;
   checked?: boolean;
@@ -22,7 +22,6 @@ interface CheckboxProps {
 }
 
 const Contact: React.FC = () => {
-
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [selected, setSelected] = useState({
     webDev: false,
@@ -30,11 +29,12 @@ const Contact: React.FC = () => {
     ux: false,
     maintenance: false,
   });
+
   return (
     <main className="flex flex-col gap-8 py-28 px-20 min-h-screen">
 
       <section
-        className="relative flex flex-col items-center gap-5 py-16 px-8 w-full bg-primary text-white rounded-lg"
+        className="relative flex flex-col items-center gap-5 py-16 px-8 w-full bg-primary text-white rounded-lg overflow-hidden"
         aria-labelledby="contact-banner"
       >
         <h1
@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
 
         <div className="absolute -top-2.5 left-0 opacity-72">
           <Image
-            src="/images/codifyx logomark_1.png"
+            src={CodifyxLogoMark}
             alt="Decorative design"
             width={180}
             height={180}
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
 
         <div className="absolute -bottom-2.5 right-0 opacity-72">
           <Image
-            src="/images/codifyx logomark_1.png"
+            src={CodifyxLogoMark}
             alt="Decorative design"
             width={180}
             height={180}

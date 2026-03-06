@@ -18,11 +18,14 @@
 
   /* BORDER */
   --border-default: #d5d7da;
-  --border-muted: #e9eaeb;
+  --border-muted: #E9EAEB;
 
   /* BACKGROUND */
   --bg-page: #ffffff;
-  --bg-muted: #f5f5f5;
+  --bg-subtle: #E9EAEB;
+  --bg-muted: #F5F5F5;
+
+  --bg-tool-section: #FAFAFA;
   
   /* FEEDBACK */
   --focus-ring: #f4ebff;  
@@ -32,6 +35,7 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #ffffff;
+  --bg-tool-section: #181D27;
 
   --brand-primary: #0043F1;
 
@@ -63,6 +67,7 @@
   --color-border-muted: var(--border-muted);
 
   --color-background-page: var(--bg-page);
+  --color-background-subtle: var(--bg-subtle);
   --color-background-muted: var(--bg-muted);
 
   --color-ring-focus: var(--focus-ring);
@@ -74,4 +79,15 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  @apply font-sans;
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
 }
