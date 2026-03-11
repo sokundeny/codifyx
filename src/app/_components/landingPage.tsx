@@ -5,6 +5,7 @@ import SecondaryButton from '@/components/secondaryButton';
 import { ArrowUpRight} from "lucide-react";
 import Image from 'next/image';
 import mac from "@/assets/landing_page/mac_mockup.png";
+import mockLandingPage from "@/assets/landing_page/landing_page.png";
 
 const LandingPage = () => {
   return (
@@ -28,13 +29,27 @@ const LandingPage = () => {
         </div>
       </div>
       {/*Macbook*/}
-      <div className="absolute left-1/2 -translate-x-1/2 -bottom-[40vh] w-[90vw]">
-        <Image
-          src={mac}
-          alt="Macbook mock up"
-          className="w-full h-auto"
-          priority
-        />
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-[-20%] w-480">
+        <div className="relative w-full"> 
+
+          {/* Screen (behind) */}
+          <div className="absolute left-[8%] top-[2%] w-[84%] h-[79%] overflow-hidden rounded-lg">
+            <Image
+              src={mockLandingPage}
+              alt="Landing Page Screen"
+              className="w-full h-full object-fill"
+            />
+          </div>
+
+          {/* Macbook Frame (on top) */}
+          <Image
+            src={mac}
+            alt="Macbook mockup"
+            className="w-full h-auto relative z-10"
+            priority
+          />
+
+        </div>
       </div>
       {/* Background ellipses */}
       <div className="absolute w-480 bottom-0 -z-10">

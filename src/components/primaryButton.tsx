@@ -14,7 +14,7 @@ const PrimaryButton = ({
 }) => {
   return (
     <Link href={navigate || "/"}>
-      <div className='flex items-center justify-center min-h-10 gap-2 py-2.5 px-4 text-sm bg-primary text-white hover:bg-blue-800 rounded-md'>
+      <div className='flex items-center justify-center min-h-10 gap-2 py-3 px-5 text-sm bg-primary font-semibold leading-6  text-white hover:bg-primary-hover rounded-lg transition-color duration-200 ease-in-out'>
           {children} {icon && icon}
       </div>
     </Link>

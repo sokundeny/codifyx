@@ -20,7 +20,7 @@ const SecondaryButton = ({
     <Link href={navigate || "/"}>
       <div className={`
           flex items-center justify-center gap-2 
-          py-2.5 px-4 text-sm  min-h-10
+          py-3 px-5 text-sm  min-h-10 leading-6
           ${theme=='dark'?'text-foreground':'text-text-secondary'}
           ${theme=='dark'?'bg-background-muted':'bg-page'} 
           font-semibold 

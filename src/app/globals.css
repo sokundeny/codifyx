@@ -15,14 +15,18 @@
   --text-secondary: #414651;
   --text-muted: #535862;
   --text-disabled: #717680;
+  --text-soft:#A4A7AE;
 
   /* BORDER */
   --border-default: #d5d7da;
-  --border-muted: #e9eaeb;
+  --border-muted: #E9EAEB;
 
   /* BACKGROUND */
   --bg-page: #ffffff;
-  --bg-muted: #f5f5f5;
+  --bg-subtle: #E9EAEB;
+  --bg-muted: #F5F5F5;
+
+  --bg-tool-section: #FAFAFA;
   
   /* FEEDBACK */
   --focus-ring: #f4ebff;  
@@ -32,13 +36,15 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #ffffff;
+  --bg-tool-section: #181D27;
 
-  --brand-primary: #003AD1;
+  --brand-primary: #0043F1;
 
   --text-primary: #FFFFFF;
   --text-secondary: #A4A7AE;
   --text-muted: #D5D7DA;
   --text-disabled: #717680;
+  --text-soft:#535862;
 
   --border-default: #414651;
   --border-muted: #414651;
@@ -58,11 +64,13 @@
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --color-text-disabled: var(--text-disabled);
+  --color-text-soft:var(--text-soft);
 
   --color-border-default: var(--border-default);
   --color-border-muted: var(--border-muted);
 
   --color-background-page: var(--bg-page);
+  --color-background-subtle: var(--bg-subtle);
   --color-background-muted: var(--bg-muted);
 
   --color-ring-focus: var(--focus-ring);
@@ -74,4 +82,15 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  @apply font-sans;
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
 }

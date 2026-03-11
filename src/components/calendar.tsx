@@ -46,7 +46,7 @@ const Calendar: React.FC = () => {
       <div className="flex items-center justify-between w-full mb-2">
         <button
           onClick={handlePrevMonth}
-          className="p-2.5 cursor-pointer hover:bg-[#F5F5F5] rounded-full transition-colors"
+          className="p-2.5 cursor-pointer hover:bg-background-muted rounded-full transition-colors"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path
@@ -58,10 +58,10 @@ const Calendar: React.FC = () => {
             />
           </svg>
         </button>
-        <h3 className="font-semibold text-[#414651] leading-6">{format(currentMonth, "MMMM yyyy")}</h3>
+        <h3 className="font-semibold text-text-secondary leading-6">{format(currentMonth, "MMMM yyyy")}</h3>
         <button
           onClick={handleNextMonth}
-          className="p-2.5 cursor-pointer hover:bg-[#F5F5F5] rounded-full transition-colors"
+          className="p-2.5 cursor-pointer hover:bg-background-muted rounded-full transition-colors"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path
@@ -77,7 +77,7 @@ const Calendar: React.FC = () => {
 
       <div className="flex flex-row justify-between w-full">
         {weekDays.map((day) => (
-          <div key={day} className="w-10 h-10 flex items-center justify-center text-sm font-medium text-[#414651]">
+          <div key={day} className="w-10 h-10 flex items-center justify-center text-sm font-medium text-text-secondary">
             {day}
           </div>
         ))}
@@ -98,10 +98,10 @@ const Calendar: React.FC = () => {
                   className={`
                     w-10 h-10 flex items-center justify-center rounded-full text-sm font-medium
                     transition-colors
-                    ${disabled ? "text-[#717680] cursor-not-allowed" : "cursor-pointer"}
-                    ${selected ? "bg-[#E6ECFF] text-[#002FA8]" : "text-[#414651]"}
-                    ${isToday(day) && !selected ? "bg-[#F5F5F5]" : ""}
-                    ${!disabled && !selected ? "hover:text-[#002FA8] hover:bg-[#E6ECFF]" : ""}
+                    ${disabled ? "text-text-disabled cursor-not-allowed" : "cursor-pointer"}
+                    ${selected ? "bg-primary-soft text-primary-hover" : "text-text-secondary"}
+                    ${isToday(day) && !selected ? "bg-background-muted" : ""}
+                    ${!disabled && !selected ? "hover:text-primary-hover hover:bg-primary-soft" : ""}
                   `}
                 >
                   {format(day, "d")}
