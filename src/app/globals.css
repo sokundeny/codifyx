@@ -73,6 +73,8 @@
   --color-background-subtle: var(--bg-subtle);
   --color-background-muted: var(--bg-muted);
 
+  --color-background-section: var(--bg-tool-section);
+
   --color-ring-focus: var(--focus-ring);
   --shadow-soft: var(--shadow-soft);
 

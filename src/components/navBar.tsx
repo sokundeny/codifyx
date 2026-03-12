@@ -4,7 +4,6 @@ import { useTheme } from "@/hooks/themeHook";
 import PrimaryButton from "./primaryButton";
 import Link from "next/link";
 import Image from "next/image";
-
 import CodifyxLight from "@/assets/Codifyx_light.png";
 import CodifyxDark from "@/assets/Codifyx_dark.png";
 
@@ -25,7 +24,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className="
+      className={`
         w-full
         flex
         justify-between
@@ -36,7 +35,7 @@ const NavBar = () => {
         top-0
         z-50
         backdrop-blur-md
-      "
+      `}
     >
       {/* Left: Logo + Nav Items */}
       <div className="flex items-center gap-8">

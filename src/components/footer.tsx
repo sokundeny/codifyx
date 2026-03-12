@@ -52,7 +52,7 @@ const Footer = () => {
   const { theme, toggle } = useTheme();
 
   return (
-    <footer className="flex flex-col items-stretch relative h-[60vh] gap-16 w-full py-20 px-16 px overflow-hidden">
+    <footer className="flex flex-col items-stretch relative h-168 gap-16 w-full py-20 px-16 px overflow-hidden">
       {/* top */}
       <div className="flex items-start justify-between gap-30">
         <div className="w-124 text-2xl bg-linear-to-r from-gray-400 to-gray-800 text-transparent bg-clip-text">
@@ -146,11 +146,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className={`flex items-center justify-center absolute -bottom-[55%] ${theme == "dark" ? "opacity-16" : "opacity-8"}`}>
+      <div className={`flex items-center justify-center absolute -bottom-70 left-0 ${theme == "dark" ? "opacity-16" : "opacity-8"} w-full`}>
         <Image
           src={theme == "dark" ? codifyx_dark : codifyx}
           alt="Codifyx"
-          className="w-screen h-auto"
+          className="w-full h-auto object-contain"
         />
       </div>
     </footer>
