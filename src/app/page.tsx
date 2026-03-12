@@ -10,7 +10,7 @@ import CTA from "./_components/cta";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div id='top' className="flex flex-col">
       <LandingPage/>
       <AboutUs />
       <Service/>

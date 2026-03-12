@@ -23,7 +23,7 @@ const Team: React.FC = () => {
   ];
 
   return (
-    <section className="flex flex-col gap-20 items-center py-20 px-28 w-full">
+    <section id="team" className="flex flex-col gap-20 items-center py-20 px-28 w-full">
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-3 items-center font-semibold">
           <h3 className="text-primary leading-6">CREEATIVE TEAM</h3>

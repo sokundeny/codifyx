@@ -24,7 +24,7 @@ const Service = () => {
   };
 
   return (
-    <div className="flex gap-16 items-start h-245.5 w-full py-20 px-28 rounded-sm">
+    <div id='services' className="flex gap-16 items-start h-245.5 w-full py-20 px-28 rounded-sm">
       <div className="flex flex-col justify-between w-100 h-full">
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-3">

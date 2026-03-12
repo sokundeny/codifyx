@@ -74,14 +74,16 @@ const Footer = () => {
           ))}
         </div>
 
-        <div
-          className={`flex-none flex gap-2 items-center justify-center cursor-pointer
+        <Link href={'#top'}>
+          <div
+            className={`flex-none flex gap-2 items-center justify-center cursor-pointer
             py-2.5 px-4.5 rounded-md hover:bg-gray-50 hover:text-[#181D27]
             text-text-muted`}
-        >
-          <ArrowUp />
-          <div>back to top</div>
-        </div>
+          >
+            <ArrowUp />
+            <div>back to top</div>
+          </div>
+        </Link>
       </div>
 
       <div className="flex flex-col gap-16">
@@ -103,7 +105,7 @@ const Footer = () => {
             {navItems.map((item, index) => (
               <Link
                 key={index}
-                href={"/"}
+                href={item.url}
                 className={`
                   relative py-2 px-3
                   ${theme == "light" && "text-gray-400"}

@@ -52,7 +52,7 @@ const NavBar = () => {
           {navItems.map((item, index) => (
             <Link
               key={index}
-              href={"/"}
+              href={item.url}
               className={`
                 relative
                 text-text-muted
@@ -129,6 +129,7 @@ const NavBar = () => {
               />
             </svg>
           }
+          navigate="/contact"
         >
           Contact Us
         </PrimaryButton>

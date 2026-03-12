@@ -6,13 +6,14 @@ import codifyxWhite from '@/assets/codifyx_logomark_1.png';
 import aboutUs from '@/assets/aboutUs/about_us_pic.jpg'
 import {MoveRight } from "lucide-react";
 import { useTheme } from '@/hooks/themeHook';
+import Link from 'next/link';
 
 const AboutUs = () => {
 
   const {theme}=useTheme();
 
   return (
-    <div className='flex flex-col gap-20 w-full h-245.5 py-20 px-28'>
+    <div id='about' className='flex flex-col gap-20 w-full h-245.5 py-20 px-28'>
       {/* Header */}
       <div className="flex flex-col items-center w-full gap-12">
         <Image 
@@ -70,11 +71,13 @@ const AboutUs = () => {
         <div className="text-text-muted leading-6 w-162">
           Codifyx is a software development studio focused on building custom web and mobile applications. We work closely with our clients to turn complex requirements into reliable, scalable digital products.
         </div>
-        <div className={`flex-none flex gap-2 items-center justify-center cursor-pointer
+        <Link href={'contact'}>
+          <div className={`flex-none flex gap-2 items-center justify-center cursor-pointer
             py-2.5 px-4.5 rounded-md hover:bg-gray-50 hover:text-[#181D27]
             text-text-muted`}>
-          Book A Call <MoveRight size={20} />
-        </div>
+            Book A Call <MoveRight size={20} />
+          </div>
+        </Link>
       </div>
     </div>
   )

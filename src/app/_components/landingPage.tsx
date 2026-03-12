@@ -25,7 +25,7 @@ const LandingPage = () => {
           <PrimaryButton icon={<ArrowUpRight size={14}/>} navigate='/contact'>
             Start a Project
           </PrimaryButton>
-          <SecondaryButton>
+          <SecondaryButton navigate='/cases'>
             View Our work
           </SecondaryButton>
         </div>
